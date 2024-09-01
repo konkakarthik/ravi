@@ -1,0 +1,20 @@
+import requests
+
+
+api_url = "https://www.RCU.gov.sa/data/submit"
+
+
+payload = {
+    "api_key": "12345abcdAPIKEY",
+    "credentials": {
+        "user": "testuser",
+        "token": "Q29tcGxleFBhc3N3b3JkMTIzIQ=="
+    }
+}
+
+# Send POST request
+response = requests.post(api_url, json=payload)
+
+# Print response (for testing purposes only)
+print("Status Code:", response.status_code)
+print("Response Body:", response.text)
